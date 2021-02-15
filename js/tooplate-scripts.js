@@ -9,7 +9,7 @@ function drawLineChart() {
           {
             scaleLabel: {
               display: true,
-              labelString: "Hits"
+              labelString: "USD"
             }
           }
         ]
@@ -36,7 +36,7 @@ function drawLineChart() {
         datasets: [
           {
             label: "Remittances",
-            data: [88, 608, 790, 57, 56, 55, 70],
+            data: [88, 208, 290, 57, 56, 55, 70],
             fill: false,
             borderColor: "rgb(75, 192, 192)",
             lineTension: 0.1
