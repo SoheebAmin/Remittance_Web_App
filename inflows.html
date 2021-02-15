@@ -30,7 +30,7 @@
                     <nav class="navbar navbar-expand-xl navbar-light bg-light">
                         <a class="navbar-brand" href="#">
                             <i class="fas fa-3x fa-tachometer-alt tm-site-icon"></i>
-                            <h1 class="tm-site-title mb-0">Inflows Dashboard</h2>
+                            <h1 class="tm-site-title mb-0">Inflows</h5>
                         </a>
                         <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -77,13 +77,11 @@
                 </div>
             </div>
 
-            <!-- FIRST ROW -->
-
             <!-- Line Chart-->
             <div class="row tm-content-row tm-mt-big">
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">Remittance Inflows</h2>
+                        <h2 class="tm-block-title">Top 6 by 2023</h2>
                         <canvas id="lineChart"></canvas> 
                     </div>
                 </div>
@@ -91,7 +89,7 @@
                 <!-- Bar Chart-->
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">Top Recievers</h2>
+                        <h2 class="tm-block-title">Top 6 Total Recievers</h2>
                         <canvas id="barChart"></canvas>
                     </div>
                 </div>
@@ -107,15 +105,16 @@
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
                         <div class="row">
+                             <h2 class="tm-block-title">All Remittance Recievers in 2023</h2>
                             <div class="col-8">
-                                <h2 class="tm-block-title d-inline-block">Top Recievers of Remittance</h2>
+                                <h2 class="tm-block-title d-inline-block">Countries</h2>
                             </div>
                             <div class="col-4 text-right">
                             </div>
                         </div>
                         <ol class="tm-list-group tm-list-group-alternate-color tm-list-group-pad-big">
                             <li class="tm-list-group-item">
-                                Donec eget libero
+                                Testo test
                             </li>
                             <li class="tm-list-group-item">
                                 Nunc luctus suscipit elementum
@@ -138,19 +137,21 @@
                         </ol>
                     </div>
                 </div>
+
                 <!-- Second List-->
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
                         <div class="row">
+                             <h2 class="tm-block-title">All Remittance Totals</h2>
                             <div class="col-8">
-                                <h2 class="tm-block-title d-inline-block">List 2</h2>
+                                <h2 class="tm-block-title d-inline-block">Countries</h2>
                             </div>
                             <div class="col-4 text-right">
                             </div>
                         </div>
                         <ol class="tm-list-group tm-list-group-alternate-color tm-list-group-pad-big">
                             <li class="tm-list-group-item">
-                                Donec eget libero
+                                Testo test
                             </li>
                             <li class="tm-list-group-item">
                                 Nunc luctus suscipit elementum
@@ -173,9 +174,11 @@
                         </ol>
                     </div>
                 </div>
+
+                <!-- Search Box -->
                 <div class="tm-col tm-col-small">
                     <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">Upcoming Tasks</h2>
+                        <h2 class="tm-block-title">Search By Country</h2>
                         <ol class="tm-list-group">
                             <li class="tm-list-group-item">List of tasks</li>
                             <li class="tm-list-group-item">Lorem ipsum doloe</li>
@@ -193,6 +196,8 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- Footer -->
             <footer class="row tm-mt-small">
                 <div class="col-12 font-weight-light">
                     <p class="d-inline-block tm-bg-black text-white py-2 px-4">
@@ -203,6 +208,8 @@
             </footer>
         </div>
     </div>
+
+    <!-- Javascript sources, to be loaded at the end. -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <!-- https://jquery.com/download/ -->
     <script src="js/moment.min.js"></script>
@@ -227,7 +234,6 @@
             configPie,
             lineChart;
         barChart, pieChart;
-        // DOM is ready
         $(function () {
             updateChartOptions();
             drawLineChart(); // Line Chart
