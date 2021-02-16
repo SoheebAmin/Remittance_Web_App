@@ -157,18 +157,7 @@
                         
                           </div>
                           
-                          
-                        <!-- MOVE THIS ELSEWHERE AND MAKE IT DO SOMETHING ELSE-->  
-                        <script> 
-                        const searchButton = document.getElementById('search-button');
-                        const searchInput = document.getElementById('search-input');
-                        searchButton.addEventListener('click', () => {
-                        const inputValue = searchInput.value;
-                        alert(inputValue);
-                        });
-                        </script>
-
-                        <ol class="tm-list-group tm-list-group-alternate-color tm-list-group-pad-big">
+                        <ol id="search" class="tm-list-group tm-list-group-alternate-color tm-list-group-pad-big">
                             <li class="tm-list-group-item">
                                 Testo test
                             </li>
@@ -230,6 +219,7 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- https://getbootstrap.com/ -->
     <script src="js/tooplate-scripts-inflows.js"></script>
+    <script src="js/inflows_search.js"></script>
     <script>
         let ctxLine,
             ctxBar,
@@ -247,7 +237,6 @@
             drawLineChart(); // Line Chart
             drawBarChart(); // Bar Chart
             drawPieChart(); // Pie Chart
-            drawCalendar(); // Calendar
 
             $(window).resize(function () {
                 updateChartOptions();
