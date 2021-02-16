@@ -24,35 +24,48 @@ function drawLineChart() {
       type: "line",
       data: {
         labels: [
+          "2013",
+          "2014",
+          "2015",
+          "2016",
           "2017",
-          "2018",
-          "2019",
-          "2020",
-          "2021",
-          "2022",
-          "2023"
+
 
         ],
         datasets: [
           {
-            label: "Remittance Inflows",
+            label: "Country A",
             data: [88, 208, 290, 57, 56, 55, 70],
             fill: false,
             borderColor: "rgb(75, 192, 192)",
             lineTension: 0.1
           },
           {
-            label: "Popular Hits",
+            label: "Country B",
             data: [33, 45, 37, 21, 55, 74, 69],
             fill: false,
             borderColor: "rgba(255,99,132,1)",
             lineTension: 0.1
           },
           {
-            label: "Featured",
-            data: [44, 19, 38, 46, 85, 66, 79],
+            label: "Country C",
+            data: [44, 19, 38, 46, 85, 34, 79],
             fill: false,
             borderColor: "rgba(153, 102, 255, 1)",
+            lineTension: 0.1
+          },
+          {
+            label: "Country D",
+            data: [94, 19, 58, 46, 85, 66, 70],
+            fill: false,
+            borderColor: "rgba(53, 122, 55, 1)",
+            lineTension: 0.1
+          },
+          {
+            label: "Country E",
+            data: [4, 19, 308, 46, 85, 66, 100],
+            fill: false,
+            borderColor: "rgba(225, 2, 255, 1)",
             lineTension: 0.1
           }
         ]

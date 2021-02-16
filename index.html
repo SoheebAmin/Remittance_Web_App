@@ -32,14 +32,18 @@
                             <form action="index.html" method="post" class="tm-login-form">
                                 <div class="input-group">
                                     <label for="username" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Username</label>
-                                    <input name="username" type="text" class="form-control validate col-xl-9 col-lg-8 col-md-8 col-sm-7" id="username" value="admin" required>
+                                    <input id="username_input" name="username" type="text" class="form-control validate col-xl-9 col-lg-8 col-md-8 col-sm-7" id="username" value="admin" required>
                                 </div>
                                 <div class="input-group mt-3">
                                     <label for="password" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Password</label>
-                                    <input name="password" type="password" class="form-control validate" id="password" value="1234" required>
+                                    <input id="password_input" name="password" type="password" class="form-control validate" id="password" value="1234" required>
                                 </div>
                                 <div class="input-group mt-3">
-                                    <button type="submit" class="btn btn-primary d-inline-block mx-auto"><a href="inflows.html">Login</a></button>
+
+                                    <!-- login button, calls validation function -->
+                                    <button id="login" type="submit" class="btn btn-primary d-inline-block mx-auto"
+                                    onclick="checkLogin();return false">Login</button>
+                                
                                 </div>
                                 <div class="input-group mt-3">
                                     <p><em>Log in with any username and password.</em></p>
@@ -53,12 +57,16 @@
         <footer class="row tm-mt-big">
             <div class="col-12 font-weight-light text-center">
                 <p class="d-inline-block tm-bg-black text-white py-2 px-4">
-                Copyright &copy; 2018. Template by
+                Copyright &copy; 2018. Template from
                 <a href="http://www.tooplate.com" class="text-white tm-footer-link">Tooplate</a> |  Distributed by <a href="https://themewagon.com" class="text-white tm-footer-link">ThemeWagon</a>
                 </p>
             </div>
         </footer>
     </div>
+
+    <!-- local, self-made file -->
+    <script src="js/login_scripts.js"></script>
+
 </body>
 
 </html>
