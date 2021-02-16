@@ -119,39 +119,34 @@
                             <li class="tm-list-group-item">
                                 Nunc luctus suscipit elementum
                             </li>
-                            <li class="tm-list-group-item">
-                                Maecenas eu justo maximus
-                            </li>
-                            <li class="tm-list-group-item">
-                                Pellentesque auctor urna nunc
-                            </li>
-                            <li class="tm-list-group-item">
-                                Sit amet aliquam lorem efficitur
-                            </li>
-                            <li class="tm-list-group-item">
-                                Pellentesque auctor urna nunc
-                            </li>
-                            <li class="tm-list-group-item">
-                                Sit amet aliquam lorem efficitur
-                            </li>
                         </ol>
                     </div>
                 </div>
 
                 <!-- Second List-->
+                
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
                         <div class="row">
-                             <h2 class="tm-block-title">Search by Country</h2>
+                             <h2 class="tm-block-title">Search by Country for Given Year</h2>
                         </div>
                         
+                        <select id="year" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                            <option value="" disabled selected>Select Year</option>
+                            <option value="One">One</option>
+                            <option value="Two">Two</option>
+                            <option value="Three">Three</option>
+                          </select>
+
                         <!-- Search box -->
                         <div class="input-group">
                             
                             <div class="form-outline">
-                              <input id="search-input" type="search" id="form1" class="form-control" size="37"/>
+                              <input id="search-input" type="search" id="form1" class="form-control" size="37" 
+                              placeholder="Enter full country name here"/>
                             </div>
-                            <button id="search-button" type="button" class="btn btn-primary">
+                            <button id="search-button" type="button" class="btn btn-primary"
+                            onclick="getYear();return false">
                               <i class="fas fa-search"></i>
                             </button>
                         
@@ -164,21 +159,7 @@
                             <li class="tm-list-group-item">
                                 Nunc luctus suscipit elementum
                             </li>
-                            <li class="tm-list-group-item">
-                                Maecenas eu justo maximus
-                            </li>
-                            <li class="tm-list-group-item">
-                                Pellentesque auctor urna nunc
-                            </li>
-                            <li class="tm-list-group-item">
-                                Sit amet aliquam lorem efficitur
-                            </li>
-                            <li class="tm-list-group-item">
-                                Pellentesque auctor urna nunc
-                            </li>
-                            <li class="tm-list-group-item">
-                                Sit amet aliquam lorem efficitur
-                            </li>
+
                         </ol>
                     </div>
                 </div>
