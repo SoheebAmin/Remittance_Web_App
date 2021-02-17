@@ -18,8 +18,10 @@ function searchCountry() {
     for (let i = 0; i != inflows_data.length; i++) {
         current_country = Object.values(inflows_data[i])
         for (let j = 0; j != current_country.length; j++) {
-            if(current_country[j] == input) {
-                country_exists = true;
+            if(typeof current_country[j] === 'string') {
+                if(current_country[j].toLowerCase() == input.toLowerCase()) {
+                    country_exists = true;
+                }
             }
         }
     }
