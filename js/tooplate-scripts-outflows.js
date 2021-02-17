@@ -46,7 +46,7 @@ function drawLineChart() {
         ],
         datasets: [
           {
-            label: graph_data[0][48],
+            label: graph_data[0][47],
             data: graph_data[0].slice(30,47),
             fill: false,
             borderColor: "rgb(75, 192, 192)",
