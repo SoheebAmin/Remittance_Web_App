@@ -1,23 +1,45 @@
-// Populate Remittance Totals per country
-var country_name = ""
-for (let i = 0; i != inflows_data.length; i++) {
-    current_country = Object.values(inflows_data[i])
-    for (let j = 0; j != current_country.length; j++) {
-        if(typeof current_country[j] === 'string') {
+ // Grab search button and input
+var searchInput = document.getElementById('search-input');
+var limitInput = document.getElementById('limit-input');
 
+// Populate Remittance Totals per country
+function countriesByLimit() {
+    var html = "";
+    var country_name = "";
+    var remittance_total = 0;
+    for (let i = 0; i != limitInput.value; i++) {
+        try {
+        current_country = Object.values(inflows_data[i])
+        }
+        catch {
+            alert("You must enter a number between 1 and 214");
+            return false;
+        }
+        for (let j = 0; j != current_country.length; j++) {
+            if(typeof current_country[j] === 'string' & current_country[j] != "") {
+                country_name = current_country[j];
+            }
+            else {
+                remittance_total += current_country[j] // if it isn't a string, it is part of the totals for the remittance values.
+            }
+        }
+        // Make data more presentable by rounding it, and then generating the list.
+        remittance_total = Math.round(remittance_total)/1000
+        if(remittance_total > 0) {
+            html += '<li class="tm-list-group-item"> ' + country_name + ' - ' + remittance_total + ' billion </li>';
+        }
+        else {
+            html += '<li class="tm-list-group-item"> ' + country_name + ' - unrecorded </li>';
         }
     }
+    document.querySelector("#total").innerHTML = html
 }
-
 
 // Grab Selected Year
 function getYear() {
     return selectedYear = document.getElementById('year').value;
 }
 
- // Grab search button and input
-var searchButton = document.getElementById('search-button');
-var searchInput = document.getElementById('search-input');
 
 
 // Get Remittance Results for Country, per given year
