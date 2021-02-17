@@ -10,9 +10,7 @@ var searchInput = document.getElementById('search-input');
 
 
 // Generate results
-function searchCountry () {
-    // grabs what is searched
-    searchButton.addEventListener('click', () => {
+function searchCountry() {
     const input = searchInput.value; 
     
     // Checks to see if the searched country is actually a country in our database 
@@ -31,22 +29,14 @@ function searchCountry () {
         return false;
     }
 
-
-    // If so, we inject the remittance data for the given year via HTML
-    html = "";
-    for (i = 0; i < 5; i++) {
-    html += '<li class="tm-list-group-item"> ' + input + ' - ' +  getYear() + ' </li>';
-    } 
-    document.querySelector("#search").innerHTML = html;    
-
     // If so, we inject the remittance data for the given year via HTML
     html = "";
     for (i = 0; i < 5; i++) {
     html += '<li class="tm-list-group-item"> ' + input + ' - ' +  getYear() + ' </li>';
     } 
     document.querySelector("#search").innerHTML = html
-    });
-}
+};
+
 
 // // JSON Testing
 
