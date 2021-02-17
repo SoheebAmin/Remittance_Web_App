@@ -3,6 +3,30 @@ var searchInput = document.getElementById('search-input');
 var limitInput = document.getElementById('limit-input');
 
 
+
+var country_name = "";
+var remittance_total = 0;
+arr = []
+for (let i = 0; i != limitInput.value; i++) {
+    current_country = Object.values(inflows_data[i])
+    for (let j = 0; j != current_country.length; j++) {
+        if(typeof current_country[j] === 'string' & current_country[j] != "") {
+            country_name = current_country[j];
+        }
+        else {
+            remittance_total += current_country[j] // if it isn't a string, it is part of the totals for the remittance values.
+        }
+    }
+    // Make data more presentable by rounding it, and then generating the list.
+    remittance_total = Math.round(remittance_total)/1000
+    arr.push(remittance_total)
+}
+
+console.log(arr.sort(function(a, b){return b - a}));
+
+
+
+
 // Populate Remittance Totals per country
 function countriesByLimit() {
     var html = "";
