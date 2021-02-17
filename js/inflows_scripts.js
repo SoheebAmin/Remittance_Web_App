@@ -1,6 +1,51 @@
- // Grab search button and input
+// Grab search button and input
 var searchInput = document.getElementById('search-input');
 var limitInput = document.getElementById('limit-input');
+
+
+// Get the five totals for remittance countries
+var country_name = "";
+var remittance_total = 0;
+var top_five = []
+for (let i = 0; i != inflows_data.length; i++) {
+    var country_found = false;
+    current_country = Object.values(inflows_data[i])
+    for (let j = 0; j != current_country.length; j++) {
+        if(typeof current_country[j] === 'string' & current_country[j] != "") {
+            country_name = current_country[j];
+            country_found = true;
+        }
+        else {
+            remittance_total += current_country[j] // if it isn't a string, it is part of the totals for the remittance values.
+        }
+        if(country_found) {
+            if(top_five.length <= 4) {
+                top_five.push([country_name, remittance_total]);
+            }
+            else { 
+                // find smallest total in array, and remove it if smaller than current item
+                var smallest = top_five[0][1];
+                var smallest_index = null;
+
+                for(var k=1; k < 5; k++){
+                    if(top_five[k][1] < smallest){
+                        smallest = top_five[k][1];  
+                        smallest_index = k;
+                    }
+
+                }
+                if(remittance_total > smallest) {
+                    top_five[smallest_index] = [country_name, remittance_total];
+                }
+            }
+        }
+    }
+}
+console.log(top_five);
+
+
+
+
 
 // Populate Remittance Totals per country
 function countriesByLimit() {
@@ -34,6 +79,7 @@ function countriesByLimit() {
     }
     document.querySelector("#total").innerHTML = html
 }
+
 
 // Grab Selected Year
 function getYear() {
