@@ -1,3 +1,5 @@
+
+
 const width_threshold = 480;
 
 function drawLineChart() {
@@ -24,35 +26,58 @@ function drawLineChart() {
       type: "line",
       data: {
         labels: [
-          "2017",
-          "2018",
-          "2019",
-          "2020",
-          "2021",
-          "2022",
-          "2023"
-
+          "2000",
+          "2001",
+          "2002",
+          "2003",
+          "2004",
+          "2005",
+          "2006",
+          "2007",
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016"
         ],
         datasets: [
           {
-            label: "Remittances",
-            data: [88, 28, 90, 57, 56, 55, 70],
+            label: graph_data[0][48],
+            data: graph_data[0].slice(30,47),
             fill: false,
             borderColor: "rgb(75, 192, 192)",
             lineTension: 0.1
           },
           {
-            label: "Popular Hits",
-            data: [33, 45, 37, 21, 55, 74, 69],
+            label: graph_data[1][47],
+            data: graph_data[1].slice(30,48),
             fill: false,
             borderColor: "rgba(255,99,132,1)",
             lineTension: 0.1
           },
           {
-            label: "Featured",
-            data: [44, 19, 38, 46, 85, 66, 79],
+            label: graph_data[2][47],
+            data: graph_data[2].slice(30,48),
             fill: false,
             borderColor: "rgba(153, 102, 255, 1)",
+            lineTension: 0.1
+          },
+          {
+            label: graph_data[3][47],
+            data: graph_data[3].slice(30,47),
+            fill: false,
+            borderColor: "rgba(53, 122, 55, 1)",
+            lineTension: 0.1
+          },
+          {
+            label: graph_data[4][47],
+            data: graph_data[4].slice(30,47),
+            fill: false,
+            borderColor: "rgba(225, 2, 255, 1)",
             lineTension: 0.1
           }
         ]
@@ -78,7 +103,7 @@ function drawBarChart() {
             },
             scaleLabel: {
               display: true,
-              labelString: "Hits"
+              labelString: "Remittances"
             }
           }
         ]
@@ -91,11 +116,11 @@ function drawBarChart() {
     configBar = {
       type: "bar",
       data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        labels: [top_5_remittance[0][1], top_5_remittance[1][1], top_5_remittance[2][1], top_5_remittance[3][1], top_5_remittance[4][1]],
         datasets: [
           {
-            label: "# of Hits",
-            data: [12, 19, 3, 5, 2, 3],
+            label: "Remittance (Billions)",
+            data: [top_5_remittance[0][0], top_5_remittance[1][0], top_5_remittance[2][0], top_5_remittance[3][0], top_5_remittance[4][0]],
             backgroundColor: [
               "rgba(255, 99, 132, 0.2)",
               "rgba(54, 162, 235, 0.2)",
@@ -136,15 +161,18 @@ function drawPieChart() {
       data: {
         datasets: [
           {
-            data: [4600, 5400],
+            data: [top_5_remittance[0][0], top_5_remittance[1][0], top_5_remittance[2][0], top_5_remittance[3][0], top_5_remittance[4][0]],
             backgroundColor: [
+              window.chartColors.red,
+              window.chartColors.blue,
+              window.chartColors.yellow,
+              window.chartColors.green,
               window.chartColors.purple,
-              window.chartColors.green
             ],
             label: "Storage"
           }
         ],
-        labels: ["Used: 4,600 GB", "Available: 5,400 GB"]
+        labels: [top_5_remittance[0][1], top_5_remittance[1][1], top_5_remittance[2][1], top_5_remittance[3][1], top_5_remittance[4][1]]
       },
       options: optionsPie
     };
@@ -185,9 +213,9 @@ function updateBarChart() {
   }
 }
 
-// Reload the page so that charts will display correctly
+ // Reload the page so that charts will display correctly
 function reloadPage() {
   setTimeout(function() {
     window.location.reload();
-  }); 
+  });
 }

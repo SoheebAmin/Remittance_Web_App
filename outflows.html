@@ -30,7 +30,7 @@
                     <nav class="navbar navbar-expand-xl navbar-light bg-light">
                         <a class="navbar-brand" href="#">
                             <i class="fas fa-3x fa-tachometer-alt tm-site-icon"></i>
-                            <h1 class="tm-site-title mb-0">Inflows</h5>
+                            <h1 class="tm-site-title mb-0">Outflows</h5>
                         </a>
                         <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -81,7 +81,7 @@
             <div class="row tm-content-row tm-mt-big">
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">Top Inflows 2000 - 2017</h2>
+                        <h2 class="tm-block-title">Top Outflows 2000 - 2016</h2>
                         <canvas id="lineChart"></canvas> 
                     </div>
                 </div>
@@ -89,7 +89,7 @@
                 <!-- Bar Chart-->
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">Top Total Recievers</h2>
+                        <h2 class="tm-block-title">Top Total Senders</h2>
                         <canvas id="barChart"></canvas>
                     </div>
                 </div>
@@ -105,7 +105,7 @@
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
                         <div class="row">
-                             <h2 class="tm-block-title">All Remittances Total</h2>
+                             <h2 class="tm-block-title">All Outflows Total</h2>
 
                         <!-- Search box -->
                         <div class="input-group">
@@ -189,7 +189,6 @@
                             <option value="2014">2014</option>
                             <option value="2015">2015</option>
                             <option value="2016">2016</option>
-                            <option value="2017">2017</option>
                           </select>
 
                         <!-- Search box -->
@@ -216,7 +215,7 @@
                 <div class="tm-col tm-col-small">
                     <div class="bg-white tm-block h-100">
                         <h2 class="tm-block-title">Dashboard Info</h2>
-                        <p>Here we have the top five recievers of remittances charted from 2000 - 2017, as well as their totals as a bar and chart for all years up until 2017.
+                        <p>Here we have the top five senders of remittances charted from 2000 - 2016, as well as their totals as a bar and chart for all years up until 2016.
                             It is possible to display the totals of a specified number of countries, as well search a country by a given year, with search result feedback given.
                         </p>
                     </div>
@@ -236,9 +235,9 @@
     </div>
 
     <!-- loading JSON file-->
-    <script src="json_data/remittance-inflow-raw.js"></script>
+    <script src="json_data/remittance-outflow-raw.js"></script>
     <!-- local, self-made file -->
-    <script src="js/inflows_scripts.js"></script>
+    <script src="js/outflows_scripts.js"></script>
     <!-- Javascript sources, to be loaded at the end. -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <!-- https://jquery.com/download/ -->
