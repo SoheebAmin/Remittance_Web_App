@@ -39,21 +39,22 @@ for (let i = 0; i != full_arr.length; i++) {
     }
 }
 
-// Get desired years for Top Receivers
-var country_name = "";
-var remittance_total = 0;
-var arr = []
-var full_arr = [];
-for (let i = 0; i != inflows_data.length; i++) {
-    current_country = Object.values(inflows_data[i])
-    for (let j = 0; j != current_country.length; j++) {
-        for (let k = 0; k != top_5_remittance.length; k++) {   
-            if(current_country[j] == top_5_remittance[1][k]){
-                console.log(top_5_remittance[k][1]);
-            }
+// Get desired years for Top Receivers for Graph
+current_country = "";
+graph_data = []
+for (let i = 0; i != top_5_remittance.length; i++) {
+    var country_to_get = top_5_remittance[i][1];
+    for (let i = 0; i != inflows_data.length; i++) {
+        current_country_data = Object.values(inflows_data[i]);
+        if(country_to_get == current_country_data[48]) {
+            graph_data.push(current_country_data)
         }
     }
 }
+
+
+
+
 
 // Populate Remittance Totals per country
 function countriesByLimit() {

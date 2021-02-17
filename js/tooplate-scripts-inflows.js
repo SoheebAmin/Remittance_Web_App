@@ -24,6 +24,19 @@ function drawLineChart() {
       type: "line",
       data: {
         labels: [
+          "2000",
+          "2001",
+          "2002",
+          "2003",
+          "2004",
+          "2005",
+          "2006",
+          "2007",
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012",
           "2013",
           "2014",
           "2015",
@@ -34,36 +47,36 @@ function drawLineChart() {
         ],
         datasets: [
           {
-            label: "Country A",
-            data: [88, 208, 290, 57, 56, 55, 70],
+            label: graph_data[0][48],
+            data: graph_data[0].slice(30,48),
             fill: false,
             borderColor: "rgb(75, 192, 192)",
             lineTension: 0.1
           },
           {
-            label: "Country B",
-            data: [33, 45, 37, 21, 55, 74, 69],
+            label: graph_data[1][48],
+            data: graph_data[1].slice(30,48),
             fill: false,
             borderColor: "rgba(255,99,132,1)",
             lineTension: 0.1
           },
           {
-            label: "Country C",
-            data: [44, 19, 38, 46, 85, 34, 79],
+            label: graph_data[2][48],
+            data: graph_data[2].slice(30,48),
             fill: false,
             borderColor: "rgba(153, 102, 255, 1)",
             lineTension: 0.1
           },
           {
-            label: "Country D",
-            data: [94, 19, 58, 46, 85, 66, 70],
+            label: graph_data[3][48],
+            data: graph_data[3].slice(30,48),
             fill: false,
             borderColor: "rgba(53, 122, 55, 1)",
             lineTension: 0.1
           },
           {
-            label: "Country E",
-            data: [4, 19, 308, 46, 85, 66, 100],
+            label: graph_data[4][48],
+            data: graph_data[4].slice(30,48),
             fill: false,
             borderColor: "rgba(225, 2, 255, 1)",
             lineTension: 0.1
