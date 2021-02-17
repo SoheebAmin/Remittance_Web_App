@@ -1,4 +1,4 @@
-[
+var inflows_data = [
  {
    "Country": "Afghanistan",
    "1970": null,
