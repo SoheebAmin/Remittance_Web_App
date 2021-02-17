@@ -149,15 +149,18 @@ function drawPieChart() {
       data: {
         datasets: [
           {
-            data: [4600, 5400],
+            data: [top_5_remittance[0][0], top_5_remittance[1][0], top_5_remittance[2][0], top_5_remittance[3][0], top_5_remittance[4][0]],
             backgroundColor: [
+              window.chartColors.red,
+              window.chartColors.blue,
+              window.chartColors.yellow,
+              window.chartColors.green,
               window.chartColors.purple,
-              window.chartColors.green
             ],
             label: "Storage"
           }
         ],
-        labels: ["USA", "Japan"]
+        labels: [top_5_remittance[0][1], top_5_remittance[1][1], top_5_remittance[2][1], top_5_remittance[3][1], top_5_remittance[4][1]]
       },
       options: optionsPie
     };
