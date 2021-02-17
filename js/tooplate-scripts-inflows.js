@@ -91,7 +91,7 @@ function drawBarChart() {
             },
             scaleLabel: {
               display: true,
-              labelString: "Hits"
+              labelString: "Remittances"
             }
           }
         ]
@@ -104,11 +104,11 @@ function drawBarChart() {
     configBar = {
       type: "bar",
       data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        labels: [top_5_remittance[0][1], top_5_remittance[1][1], top_5_remittance[2][1], top_5_remittance[3][1], top_5_remittance[4][1]],
         datasets: [
           {
-            label: "# of Hits",
-            data: [12, 19, 3, 5, 2, 3],
+            label: "Remittance (Billions)",
+            data: [top_5_remittance[0][0], top_5_remittance[1][0], top_5_remittance[2][0], top_5_remittance[3][0], top_5_remittance[4][0]],
             backgroundColor: [
               "rgba(255, 99, 132, 0.2)",
               "rgba(54, 162, 235, 0.2)",

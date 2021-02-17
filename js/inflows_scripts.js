@@ -4,10 +4,12 @@ var limitInput = document.getElementById('limit-input');
 
 
 
+// Get top total for countries
 var country_name = "";
 var remittance_total = 0;
-arr = []
-for (let i = 0; i != limitInput.value; i++) {
+var arr = []
+var full_arr = [];
+for (let i = 0; i != inflows_data.length; i++) {
     current_country = Object.values(inflows_data[i])
     for (let j = 0; j != current_country.length; j++) {
         if(typeof current_country[j] === 'string' & current_country[j] != "") {
@@ -20,10 +22,25 @@ for (let i = 0; i != limitInput.value; i++) {
     // Make data more presentable by rounding it, and then generating the list.
     remittance_total = Math.round(remittance_total)/1000
     arr.push(remittance_total)
+    full_arr.push([remittance_total, country_name])
 }
 
-console.log(arr.sort(function(a, b){return b - a}));
+// Sort the remittances values, and grab the top 5
+top_5_val = arr.sort(function(a, b){return b - a});
+top_5_val = top_5_val.slice(0,5);
 
+// Get the country names for the top 5.
+top_5_remittance = []
+for (let i = 0; i != full_arr.length; i++) {
+    for (let j = 0; j != top_5_val.length; j++) {   
+        if(full_arr[i][0] == top_5_val[j]){
+            top_5_remittance.push(full_arr[i]);
+        }
+    }
+}
+
+
+// Get desired years for Top Receivers
 
 
 
