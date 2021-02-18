@@ -1,4 +1,4 @@
-var outflows_prediction_data = [
+[
  {
    "FIELD1": 0,
    "Country": "Afghanistan",
