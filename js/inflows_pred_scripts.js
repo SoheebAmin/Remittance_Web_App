@@ -46,7 +46,7 @@ for (let i = 0; i != top_5_remittance.length; i++) {
     var country_to_get = top_5_remittance[i][1];
     for (let i = 0; i != inflows_prediction_data.length; i++) {
         current_country_data = Object.values(inflows_prediction_data[i]);
-        if(country_to_get == current_country_data[5]) {
+        if(country_to_get == current_country_data[6]) {
             graph_data.push(current_country_data)
         }
     }

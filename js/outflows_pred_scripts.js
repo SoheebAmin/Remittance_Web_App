@@ -9,8 +9,8 @@ var country_name = "";
 var remittance_total = 0;
 var arr = []
 var full_arr = [];
-for (let i = 0; i != inflows_data.length; i++) {
-    current_country = Object.values(inflows_data[i])
+for (let i = 0; i != outflows_prediction_data.length; i++) {
+    current_country = Object.values(outflows_prediction_data[i])
     for (let j = 0; j != current_country.length; j++) {
         if(typeof current_country[j] === 'string' & current_country[j] != "") {
             country_name = current_country[j];
@@ -44,14 +44,13 @@ current_country = "";
 graph_data = []
 for (let i = 0; i != top_5_remittance.length; i++) {
     var country_to_get = top_5_remittance[i][1];
-    for (let i = 0; i != inflows_data.length; i++) {
-        current_country_data = Object.values(inflows_data[i]);
-        if(country_to_get == current_country_data[48]) {
+    for (let i = 0; i != outflows_prediction_data.length; i++) {
+        current_country_data = Object.values(outflows_prediction_data[i]);
+        if(country_to_get == current_country_data[6]) {
             graph_data.push(current_country_data)
         }
     }
 }
-
 
 
 
@@ -64,7 +63,7 @@ function countriesByLimit() {
     arr = []
     for (let i = 0; i != limitInput.value; i++) {
         try {
-        current_country = Object.values(inflows_data[i])
+        current_country = Object.values(outflows_prediction_data[i])
         }
         catch {
             alert("You must enter a number between 1 and 214");
@@ -110,12 +109,12 @@ function searchCountry() {
     // Checks to see if the searched country is actually a country in our database 
     var country_exists = false;
     country_with_data = null;
-    for (let i = 0; i != inflows_data.length; i++) {
-        current_country = Object.values(inflows_data[i])
+    for (let i = 0; i != outflows_prediction_data.length; i++) {
+        current_country = Object.values(outflows_prediction_data[i])
         for (let j = 0; j != current_country.length; j++) {
             if(typeof current_country[j] === 'string') {
                 if(current_country[j].toLowerCase() == input.toLowerCase()) {
-                    country_with_data = inflows_data[i]
+                    country_with_data = outflows_prediction_data[i]
                     country = current_country[j]
                     country_exists = true;
                     break;

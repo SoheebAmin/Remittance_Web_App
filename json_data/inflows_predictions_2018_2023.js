@@ -1,4 +1,4 @@
-[
+inflows_prediction_data = [
  {
    "Country": "Afghanistan",
    "2018": 483.5516944,

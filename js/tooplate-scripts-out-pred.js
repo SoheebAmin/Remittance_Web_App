@@ -24,59 +24,45 @@ function drawLineChart() {
       type: "line",
       data: {
         labels: [
-          "2000",
-          "2001",
-          "2002",
-          "2003",
-          "2004",
-          "2005",
-          "2006",
-          "2007",
-          "2008",
-          "2009",
-          "2010",
-          "2011",
-          "2012",
-          "2013",
-          "2014",
-          "2015",
-          "2016",
           "2017",
-
-
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
         ],
         datasets: [
           {
-            label: graph_data[0][48],
-            data: graph_data[0].slice(30,48),
+            label: graph_data[0][6],
+            data: graph_data[0].slice(0,6),
             fill: false,
             borderColor: "rgb(75, 192, 192)",
             lineTension: 0.1
           },
           {
-            label: graph_data[1][48],
-            data: graph_data[1].slice(30,48),
+            label: graph_data[1][6],
+            data: graph_data[1].slice(0,6),
             fill: false,
             borderColor: "rgba(255,99,132,1)",
             lineTension: 0.1
           },
           {
-            label: graph_data[2][48],
-            data: graph_data[2].slice(30,48),
+            label: graph_data[2][6],
+            data: graph_data[2].slice(0,6),
             fill: false,
             borderColor: "rgba(153, 102, 255, 1)",
             lineTension: 0.1
           },
           {
-            label: graph_data[3][48],
-            data: graph_data[3].slice(30,48),
+            label: graph_data[3][6],
+            data: graph_data[3].slice(0,6),
             fill: false,
             borderColor: "rgba(53, 122, 55, 1)",
             lineTension: 0.1
           },
           {
-            label: graph_data[4][48],
-            data: graph_data[4].slice(30,48),
+            label: graph_data[4][6],
+            data: graph_data[4].slice(0,6),
             fill: false,
             borderColor: "rgba(225, 2, 255, 1)",
             lineTension: 0.1
