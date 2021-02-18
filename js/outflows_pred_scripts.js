@@ -66,7 +66,7 @@ function countriesByLimit() {
         current_country = Object.values(outflows_prediction_data[i])
         }
         catch {
-            alert("You must enter a number between 1 and 214");
+            alert("You must enter a number between 1 and 117");
             return false;
         }
         for (let j = 0; j != current_country.length; j++) {
